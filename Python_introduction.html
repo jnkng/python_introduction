@@ -416,6 +416,11 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-simple-sequential-model">
+     A simple sequential model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-more-complex-model">
      A more complex model
     </a>
@@ -3207,6 +3212,8 @@ Notes:
 <p>TensorFlow works with numpy arrays and pandas dataframes. We will now try to do a regression on some simulated data, using a neural network.</p>
 <p>The package <code class="docutils literal notranslate"><span class="pre">tensorflow</span></code> must be installed.
 To build neural networks, we start by importing the necessary modules. Note that Keras is delivered as a submodule to TensorFlow, which we can access using the dot chaining, and that we only import <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
+<div class="section" id="a-simple-sequential-model">
+<h2>A simple sequential model<a class="headerlink" href="#a-simple-sequential-model" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span><span class="p">,</span> <span class="n">random</span>
@@ -3237,7 +3244,7 @@ To build neural networks, we start by importing the necessary modules. Note that
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Python_introduction_201_0.png" src="_images/Python_introduction_201_0.png" />
+<img alt="_images/Python_introduction_202_0.png" src="_images/Python_introduction_202_0.png" />
 </div>
 </div>
 <p>We define a very simple fully connected ANN with one hidden layer and only zwo neurons inside that layer. Since we aim to perform regression, we use one neuron in the output layer.
@@ -4702,7 +4709,7 @@ dict_keys([&#39;loss&#39;])
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff7437f3fa0&gt;]
 </pre></div>
 </div>
-<img alt="_images/Python_introduction_213_1.png" src="_images/Python_introduction_213_1.png" />
+<img alt="_images/Python_introduction_214_1.png" src="_images/Python_introduction_214_1.png" />
 </div>
 </div>
 <p>Apparently, the loss dropped very quickly in the beginning and reaches a minimal level after about 75 epochs.</p>
@@ -4742,11 +4749,12 @@ output_layer: weights [array([[15.183647],
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Python_introduction_219_0.png" src="_images/Python_introduction_219_0.png" />
+<img alt="_images/Python_introduction_220_0.png" src="_images/Python_introduction_220_0.png" />
 </div>
 </div>
 <p>Interestingly, the ReLU shape of the function can be seen rather clearly.</p>
 <p>Now, let’s try to do better than that.</p>
+</div>
 <div class="section" id="a-more-complex-model">
 <h2>A more complex model<a class="headerlink" href="#a-more-complex-model" title="Permalink to this headline">¶</a></h2>
 <p>We will now test if a more flexible, more complex model with more layers and neurons, will approximate the data more accurately</p>
@@ -6654,7 +6662,7 @@ Let’s have a look at it.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Python_introduction_230_0.png" src="_images/Python_introduction_230_0.png" />
+<img alt="_images/Python_introduction_231_0.png" src="_images/Python_introduction_231_0.png" />
 </div>
 </div>
 <p>We see a moderate, yet steady decrease in both curves before hitting a plateau of slight oscillation. The graphic shows, that we do not have to deal with over fitting and that our model seems to have converged.</p>
@@ -6678,7 +6686,7 @@ Let’s have a look at it.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Python_introduction_233_0.png" src="_images/Python_introduction_233_0.png" />
+<img alt="_images/Python_introduction_234_0.png" src="_images/Python_introduction_234_0.png" />
 </div>
 </div>
 <p>At last, we see that our more complex model is very well able to find the underlying function which we used to generate our data.</p>
